@@ -2,7 +2,11 @@
 ##李志鹏davidxiaozhi的博客
 
 ##MaHua是什么?
-一个在线编辑markdown文档的编辑器
+一个在线编辑markdown文档的编辑器,下面两个你会用到
+
+* [http://mahua.jser.me](http://mahua.jser.me/) 
+* [https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll) 
+
 
 向Mac下优秀的markdown编辑器mou致敬
 
