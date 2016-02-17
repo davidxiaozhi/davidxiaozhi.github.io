@@ -1,112 +1,42 @@
-<!DOCTYPE html>
-<html>
+---
+layout: page
+description: "一生想做浪漫极客"
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Davidxiaozhi.GitHub.io : 李志鹏davidxiaozhi的博客">
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {{ post.content | strip_html | truncate:200 }}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %}
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Davidxiaozhi.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/davidxiaozhi">View on GitHub</a>
-
-          <h1 id="project_title">Davidxiaozhi.GitHub.io</h1>
-          <h2 id="project_tagline">李志鹏davidxiaozhi的博客</h2>
-              
-        </header>
-        <section>
-          <nav>
-            <ul>
-              <li><a href="https://github.com/davidxiaozhi">首页</a></li>
-              <li><a href="https://github.com/davidxiaozhi">tab1</a></li>
-              <li><a href="https://github.com/davidxiaozhi">tab2</a></li>
-              <li><a href="https://github.com/davidxiaozhi">tab3</a></li>
-              <li><a href="https://github.com/davidxiaozhi">tab4</a></li>
-            </ul>
-          </nav>
-        </section>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h2>
-<a id="李志鹏davidxiaozhi的博客" class="anchor" href="#%E6%9D%8E%E5%BF%97%E9%B9%8Fdavidxiaozhi%E7%9A%84%E5%8D%9A%E5%AE%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>李志鹏davidxiaozhi的博客</h2>
-
-<h2>
-<a id="mahua是什么" class="anchor" href="#mahua%E6%98%AF%E4%BB%80%E4%B9%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>MaHua是什么?</h2>
-
-<p>一个在线编辑markdown文档的编辑器,下面两个你会用到</p>
-
-<ul>
-<li>
-<a href="http://mahua.jser.me/">http://mahua.jser.me</a> </li>
-<li>
-<a href="https://github.com/jekyll/jekyll">https://github.com/jekyll/jekyll</a> </li>
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
 </ul>
-
-<p>向Mac下优秀的markdown编辑器mou致敬</p>
-
-<h2>
-<a id="mahua有哪些功能" class="anchor" href="#mahua%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8A%9F%E8%83%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>MaHua有哪些功能？</h2>
-
-<ul>
-<li>方便的<code>导入导出</code>功能
-
-<ul>
-<li> 直接把一个markdown的文本文件拖放到当前这个页面就可以了</li>
-<li> 导出为一个html格式的文件，样式一点也不会丢失</li>
-</ul>
-</li>
-<li>编辑和预览<code>同步滚动</code>，所见即所得（右上角设置）</li>
-<li>
-<code>VIM快捷键</code>支持，方便vim党们快速的操作 （右上角设置）</li>
-<li>强大的<code>自定义CSS</code>功能，方便定制自己的展示</li>
-<li>有数量也有质量的<code>主题</code>,编辑器和预览区域</li>
-<li>完美兼容<code>Github</code>的markdown语法</li>
-<li>预览区域<code>代码高亮</code>
-</li>
-<li>所有选项自动记忆</li>
-</ul>
-
-<h2>
-<a id="感激" class="anchor" href="#%E6%84%9F%E6%BF%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>感激</h2>
-
-<p>感谢以下的项目,排名不分先后</p>
-
-<ul>
-<li>
-<a href="http://mouapp.com/">mou</a> </li>
-<li><a href="http://ace.ajax.org/">ace</a></li>
-<li><a href="http://jquery.com">jquery</a></li>
-</ul>
-
-<h2>
-<a id="关于作者" class="anchor" href="#%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于作者</h2>
-
-<div class="highlight highlight-javascript"><pre>  <span class="pl-k">var</span> ihubo <span class="pl-k">=</span> {
-    nickName  <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>草依山<span class="pl-pds">"</span></span>,
-    site <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://jser.me<span class="pl-pds">"</span></span>
-  }</pre></div>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+{% endif %}
