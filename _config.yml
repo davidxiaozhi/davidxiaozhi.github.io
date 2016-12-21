@@ -21,7 +21,8 @@ facebook_username:  davidxiaozhi@126.com
 
 
 # Build settings
-highlighter: pygments
+#highlighter: pygments 3.0 is rouge
+highlighter: rouge
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
@@ -36,6 +37,7 @@ anchorjs: true                          # if you want to customize anchor. check
 markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter: rouge
 
 
 
