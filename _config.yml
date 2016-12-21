@@ -4,7 +4,7 @@ SEOTitle: 肥猫零零七的博客 | The Big Fat Cat
 header-img: img/home-bg.jpg
 email: davidxiaozhi@126.com@gmail.com
 description: "关于前端与设计、黑客与画家 | 肥猫零零七，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Hux肥猫零零七 的个人博客，与你一起发现更大的世界。"
-keyword: "肥猫零零七, Hux肥猫零零七, Hux, 鬼栈, davidxiaozhi@126.com, @davidxiaozhi@126.com, 肥猫零零七的博客, Hux Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, 肖玉, Lynn, 肖玉的男朋友"
+keyword: "肥猫零零七, davidxiaozhi@126.com,肥猫零零七的博客, 博客, 个人网站, 互联网, 后端, 设计, 产品, 架构, 分布式，机器学习，深度学习，实时，离线，kafka，spark，scala，聚类，分类，逻辑回归"
 url: "http://davidxiaozhi.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 gems: [jekyll-paginate]
