@@ -18,11 +18,9 @@ tags:
 这使我们只需要专注与书写文档本身，熟悉基本的markdown语法即可，而不用过多的关注页面布局样式等，文档书写完成后也可以本地预览相应模板渲染的效果。
 </br>
 
-
 ####官方提供的安装命令
-
-```shell
- $ gem install jekyll
+```ruby
+~ $ gem install jekyll
 ~ $ jekyll new my-awesome-site
 ~ $ cd my-awesome-site
 ~/my-awesome-site $ jekyll serve
@@ -34,31 +32,29 @@ tags:
 
 -  第一步安装rvm
    我们可以采用官方提供的安装命令安装
-[官方网站 https://rvm.io/](https://rvm.io/)
-
-```shell
-	gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3；
-	curl -sSL https://get.rvm.io | bash -s stable
+   [官方网站 https://rvm.io/](https://rvm.io/)
+```ruby
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3；
+curl -sSL https://get.rvm.io | bash -s stable
 ```
    如果由于网络原因，不能通过以上命令安装，我们可以下载rvm的安装包，本地安装执行，rvm最后安装在***～/.rvm*** 目录,如果经常使用可以将～/.rvm/bin/rvm追加进/etc/profile当中 PATH变量
 
 - 第二部安装ruby 2.0.0版本以上的ruby，我是卸载后重新安装的
-
-```shell
-  		$ sudo apt-get remove ruby ruby-dev ;
-		#安装2.2.0版本 jekyll要求
-		rvm install 2.2.0；
-		rvm use 2.2.0 --default
+```ruby
+$ sudo apt-get remove ruby ruby-dev ;
+#安装2.2.0版本 jekyll要求
+rvm install 2.2.0；
+rvm use 2.2.0 --default
 ```
--	安装jekyll
-```shell
-	 gem install jekyll #顺利完成哦
+- 安装jekyll
+```ruby
+gem install jekyll #顺利完成哦
 ```
 
 有的时候我们会发现rvm以及ruby不能使用
 >You need to change your terminal emulator preferences to allow login shell.
-Sometimes it is required to use `/bin/bash --login` as the command.
-Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+>Sometimes it is required to use `/bin/bash --login` as the command.
+>Please visit https://rvm.io/integration/gnome-terminal/ for an example.
 
 就是有的时候需要登陆shell才能运行，我们可以使用上文提示的`/bin/bash --login` ，或者在ubuntu终端配置以登陆shell方式运行
 
