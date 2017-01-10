@@ -20,7 +20,7 @@ JMH 是*Java Microbenchmark Harness* 的简称，其是一个工具用来实现j
 
 ​	首先我们应该在我们的工程当中引入JMH的依赖，例如maven工程项目
 
-```xml
+```ruby
     <dependency>
         <groupId>org.openjdk.jmh</groupId>
         <artifactId>jmh-core</artifactId>
