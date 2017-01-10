@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title:  "JMH-Java微基准测试工具"
 date:   2017-01-09 18:12:03 +0800
 categories: jekyll update
@@ -11,7 +12,7 @@ tags:
 ---
 
 
-[TOC]
+
 
 JMH 是*Java Microbenchmark Harness* 的简称，其是一个工具用来实现java的微基准测试，这个工具是由开发java虚拟机的相关人员进行设计开发的，所以这群小伙伴知道他们做的是什么样的一款工具。
 
@@ -140,9 +141,9 @@ public class MyBenchmark {
 
 `TimeUnit` 包含以下单位常量
 
-- NANOSECONDS    纳秒  $10^9$ 秒
+- NANOSECONDS    纳秒  $10^9​$ 秒
 
-- MICROSECONDS   微妙  $10^6$ 秒
+- MICROSECONDS   微妙  $10^6​$ 秒
 
 - MILLISECONDS     毫秒   $10^3$ 秒 
 
